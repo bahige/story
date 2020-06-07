@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 a {
@@ -7,11 +8,25 @@ a {
   color: black;
 }
 
+nav div {
+  background-color: lawngreen;
+}
+
+nav div:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+nav div:hover a {
+  color: red;
+}
+
 body {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   box-sizing: border-box;
+  width: 100vw;
 }
 
 #header-container {
@@ -20,18 +35,17 @@ body {
   justify-content: space-between;
   width: 100vw;
   height: 20vh;
+  background-color: yellowgreen;
 }
 
-#logo {
-  width: 80%;
-  transition-duration: 1s;
-  transition-delay: 0s;
-}
-
-#header-container:hover [alt="logo"] {
-  clip-path: inset(100% 100%);
-  transition: clip-path 2s;
-  transition-delay: 1s;
+[alt="logo"] {
+  width: 30vw;
+  height: 20vh;
+  visibility: hidden;
+  animation-name: logo_animation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
 #header-container:hover [alt="colorie"] {
@@ -41,10 +55,15 @@ body {
 
 [alt="colorie"] {
   width: 80%;
-  transform: translate(-1222px, 0px);
+  height: 20vh;
+  /* transform: translate(-1222px, 0px); */
   visibility: hidden;
-  transition-duration: 1s;
-  transition-delay: 0s;
+  /* transition-duration: 1s;
+  transition-delay: 0s; */
+  animation-name: colorie_animation;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 [alt="colorieweb"] {
@@ -78,11 +97,17 @@ article {
 #synopsis {
   height: 100vh;
   padding: 10px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-around;
 }
 
+#synopsis img {
+  padding-bottom: 20px;
+}
+
 #characters {
+  margin-top: 100px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -91,37 +116,80 @@ article {
   justify-content: center;
 }
 
+#characters h1 {
+  background-color: yellow;
+  width: 50vw;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px;
+}
+
 .row {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: inherit;
+  background-color: rgb(64, 172, 55);
+  padding: 25px;
+}
+
+.character:nth-child(2n) {
+  background-color: yellow;
+  overflow: hidden;
+}
+
+.character:nth-child(2n + 1) {
+  background-color: yellowgreen;
+  overflow: hidden;
+  color: yellow;
+}
+
+.character:hover img {
+  transform: scale(1.1);
+  transition: transform 1s;
 }
 
 #characters img {
   width: 20vw;
   height: 40vh;
+  cursor: pointer;
 }
 
 h2 {
   text-align: center;
+  font-size: 1.4rem;
 }
 
 #form {
+  padding-top: 25px;
+  margin-top: 100px;
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(yellowgreen, yellow);
 }
 
 .form-control {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-label,
 [type="submit"] {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  width: 20vw;
+  background-color: red;
+  color: white;
+  margin: auto;
+}
+
+[type="submit"]:hover {
+  cursor: pointer;
+  background: yellowgreen;
+  color: red;
+}
+
+label {
+  font-size: 1.2rem;
 }
 
 input {
@@ -146,12 +214,54 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: yellowgreen;
+  color: blue;
 }
-/* @keyframes animation {
+
+[alt="logo_one"] {
+  width: 30vw;
+  height: 20vh;
+}
+
+@keyframes logo_animation {
   from {
-    visibility: 100%;
+    visibility: hidden;
+    clip-path: circle(0 at 0 0);
   }
   to {
-    visibility: 0;
+    visibility: visible;
+    clip-path: circle(150% at 0 0);
   }
-} */
+}
+
+@keyframes logo_animation {
+  from {
+    visibility: hidden;
+    clip-path: circle(0 at 0 0);
+  }
+  to {
+    visibility: visible;
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+@keyframes logo_animation {
+  from {
+    visibility: hidden;
+    clip-path: circle(0 at 0 0);
+  }
+  to {
+    visibility: visible;
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+@keyframes colorie_animation {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+    transform: translate(-1222px, 0px);
+  }
+}

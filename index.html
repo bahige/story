@@ -13,7 +13,7 @@
     <header>
       <div id="header-container">
         <div id="logo">
-          <img src="assets/logo21 colorful.png" alt="logo" />
+          <img src="assets/logo21 colorful.jpg" alt="logo" />
         </div>
         <div>
           <img src="assets/Colorie---Copy.png" alt="colorie" />
@@ -101,11 +101,11 @@
       </div>
       <div class="row">
         <div class="character">
-          <img src="assets/characters/santiago.jpeg" alt="alba" />
+          <img src="assets/characters/santiago.jpeg" alt="santiago" />
           <h2>Santiago</h2>
         </div>
         <div class="character">
-          <img src="assets/characters/sebastian.jpeg" alt="alba" />
+          <img src="assets/characters/sebastian.jpeg" alt="sebastian" />
           <h2>Sebastian</h2>
         </div>
         <div class="character">
@@ -113,7 +113,7 @@
           <h2>Mrs Alba</h2>
         </div>
         <div class="character">
-          <img src="assets/characters/ramona.jpeg" alt="alba" />
+          <img src="assets/characters/ramona.jpeg" alt="ramona" />
           <h2>Ramona</h2>
         </div>
       </div>
@@ -128,19 +128,25 @@
       <form>
         <div class="form-control">
           <label for="first_name"> First Name</label>
-          <input type="text" name="first_name" />
+          <input type="text" name="first_name" autofocus required />
         </div>
         <div class="form-control">
           <label for="last_name"> Last Name</label>
-          <input type="text" name="last_name" />
+          <input type="text" name="last_name" required />
         </div>
         <div class="form-control">
           <label for="email"> Email</label>
-          <input type="email" name="email" />
+          <input type="email" name="email" required />
         </div>
         <div class="form-control">
           <label for="message"> Message</label>
-          <textarea name="message" id="message" cols="30" rows="15"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="15"
+            required
+          ></textarea>
         </div>
 
         <div class="form-control">
@@ -153,13 +159,14 @@
 
     <footer>
       <div id="list">
+        <div><a href="#header-container">Header</a></div>
         <div><a href="#synopsis">Synopsis</a></div>
         <div><a href="#characters">Characters</a></div>
         <div><a href="#form">Contact Us</a></div>
       </div>
 
       <div id="logo-footer">
-        <img src="assets/logo21 colorful.png" alt="logo" />
+        <img src="assets/logo21 colorful.jpg" alt="logo_one" />
       </div>
     </footer>
   </body>
