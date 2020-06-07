@@ -48,16 +48,15 @@ body {
   animation-delay: 1s;
 }
 
-#header-container:hover [alt="colorie"] {
+#header-container:hover [alt="colorie_header"] {
   transition: transform 2s, visibility 2s;
   transition-delay: 1s;
 }
 
-[alt="colorie"] {
+[alt="colorie_header"] {
   width: 80%;
   height: 20vh;
   /* transform: translate(-1222px, 0px); */
-  visibility: hidden;
   /* transition-duration: 1s;
   transition-delay: 0s; */
   animation-name: colorie_animation;
@@ -77,6 +76,16 @@ nav {
   align-items: center;
   font-size: 1.6rem;
   width: 100vw;
+}
+
+#social_media img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+#social_media img:hover {
+  cursor: pointer;
 }
 
 nav div {
@@ -100,6 +109,7 @@ article {
   margin-bottom: 100px;
   display: flex;
   justify-content: space-around;
+  box-sizing: border-box;
 }
 
 #synopsis img {
@@ -114,6 +124,7 @@ article {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 #characters h1 {
@@ -131,6 +142,7 @@ article {
   width: inherit;
   background-color: rgb(64, 172, 55);
   padding: 25px;
+  box-sizing: border-box;
 }
 
 .character:nth-child(2n) {
@@ -166,6 +178,7 @@ h2 {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(yellowgreen, yellow);
+  box-sizing: border-box;
 }
 
 .form-control {
@@ -245,6 +258,81 @@ footer {
   }
 }
 
+#character-details {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: greenyellow;
+  height: 600px;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+#character-details {
+  display: none;
+}
+
+#modal {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+#img_caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  background-color: yellow;
+  color: blue;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2%;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+
+#title {
+  font-size: 2.4rem;
+  text-decoration: underline;
+}
+
+#img_1 {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
 @keyframes logo_animation {
   from {
     visibility: hidden;
@@ -262,6 +350,6 @@ footer {
   }
   to {
     visibility: hidden;
-    transform: translate(-1222px, 0px);
+    transform: translate(-720px, 0px);
   }
 }

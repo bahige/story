@@ -16,7 +16,12 @@
           <img src="assets/logo21 colorful.jpg" alt="logo" />
         </div>
         <div>
-          <img src="assets/Colorie---Copy.png" alt="colorie" />
+          <img src="assets/Colorie---Copy.png" alt="colorie_header" />
+        </div>
+        <div id="social_media">
+          <img src="assets/social/facebook.png" alt="facebook" />
+          <img src="assets/social/instagram.png" alt="instagram" />
+          <img src="assets/social/twitter.png" alt="twitter" />
         </div>
       </div>
     </header>
@@ -82,37 +87,41 @@
         <h1>Characters</h1>
       </div>
       <div class="row">
-        <div class="character">
-          <img src="assets/characters/colorie.png" alt="colorie1" />
+        <div id="colorie" class="character" onclick="expandImage(this)">
+          <img src="assets/characters/colorie.png" alt="colorie" />
           <h2>Colorie</h2>
         </div>
-        <div class="character">
+        <div id="piccolo" class="character" onclick="expandImage(this)">
           <img src="assets/characters/piccolo.jpeg" alt="piccolo" />
           <h2>Piccolo</h2>
         </div>
-        <div class="character">
-          <img src="assets/characters/ricco.jpeg" alt="ricco" />
+        <div id="ricco" class="character" onclick="expandImage(this)">
+          <img
+            src="assets/characters/ricco.jpeg"
+            alt="ricco"
+            onclick="expandImage(this)"
+          />
           <h2>Ricco</h2>
         </div>
-        <div class="character">
+        <div id="Fal" class="character" onclick="expandImage(this)">
           <img src="assets/characters/fal.jpg" alt="fal" />
           <h2>Fal</h2>
         </div>
       </div>
       <div class="row">
-        <div class="character">
+        <div id="Santiago" class="character" onclick="expandImage(this)">
           <img src="assets/characters/santiago.jpeg" alt="santiago" />
           <h2>Santiago</h2>
         </div>
-        <div class="character">
+        <div id="Sebastian" class="character" onclick="expandImage(this)">
           <img src="assets/characters/sebastian.jpeg" alt="sebastian" />
           <h2>Sebastian</h2>
         </div>
-        <div class="character">
+        <div id="Alba" class="character" onclick="expandImage(this)">
           <img src="assets/characters/alba.jpeg" alt="alba" />
           <h2>Mrs Alba</h2>
         </div>
-        <div class="character">
+        <div id="Ramona" class="character" onclick="expandImage(this)">
           <img src="assets/characters/ramona.jpeg" alt="ramona" />
           <h2>Ramona</h2>
         </div>
@@ -169,5 +178,24 @@
         <img src="assets/logo21 colorful.jpg" alt="logo_one" />
       </div>
     </footer>
+
+    <!-------------------------------------------------Character Details Section --------------------------------------------------->
+
+    <div id="character-details">
+      <div id="closeButton" onclick="closeImage()">
+        <p>X</p>
+      </div>
+      <div id="modal">
+        <div>
+          <img id="img_1" />
+          <div id="img_caption">
+            <h1 id="title">Colorie</h1>
+            <p id="caption">Caption</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
