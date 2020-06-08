@@ -1,9 +1,9 @@
 /*-------------------------------Synopsis ------------------------------------*/
 
 article {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 15px;
-  height: 50vh;
+  height: 600px;
   width: 50vw;
 }
 
@@ -26,9 +26,8 @@ article {
 
 #form {
   padding-top: 25px;
-  margin-top: 150px;
   width: 100vw;
-  height: 120vh;
+  height: 800px;
   background-image: linear-gradient(yellowgreen, yellow);
   box-sizing: border-box;
 }
@@ -104,18 +103,17 @@ footer {
 
 @media screen and (max-width: 450px) {
   article {
-    height: 400px;
+    height: 500px;
     font-size: 0.5rem;
   }
 
   #synopsis {
-    height: 500px;
+    height: 450px;
     margin-bottom: 20px;
   }
 
   #synopsis img {
-    height: 450px;
-
+    height: 400px;
     justify-self: center;
   }
 
@@ -126,7 +124,8 @@ footer {
   }
 
   #form h1 {
-    text-indent: 5px;
+    text-indent: 4px;
+    padding: 2px;
   }
 
   [alt="logo_one"] {
@@ -141,7 +140,7 @@ footer {
 
   #form {
     height: 640px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   footer {
@@ -159,7 +158,7 @@ footer {
 
   #synopsis {
     height: 600px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   #synopsis img {
@@ -179,7 +178,6 @@ footer {
 
   #form {
     height: 750px;
-    margin-top: 100px;
   }
 
   [alt="logo_one"] {
@@ -195,5 +193,31 @@ footer {
 
   footer {
     height: 200px;
+  }
+}
+
+/*-------------------------------IPAD PR0 ------------------------------------*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    height: 200px;
+  }
+
+  [alt="logo_one"] {
+    width: 250px;
+    height: 150px;
+    margin-right: 5px;
+  }
+
+  #form {
+    height: 900px;
+  }
+
+  #synopsis {
+    height: 85vh;
+  }
+
+  article {
+    font-size: 1.6rem;
   }
 }

@@ -101,17 +101,24 @@ body {
   height: 100vh;
 }
 
-/*-------------------------------IPAD ------------------------------------*/
+/*-------------------------------IPAD PRO ------------------------------------*/
 
 @media screen and (min-width: 451px) and (max-width: 1024px) {
   [alt="colorie_header"] {
     display: none;
-    animation-delay: 0s;
   }
 
   [alt="colorieweb"] {
     width: 100vw;
     height: 70vh;
+  }
+
+  #header-container {
+    height: 150px;
+  }
+
+  [alt="logo"] {
+    height: 150px;
   }
 }
 

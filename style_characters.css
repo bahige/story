@@ -1,14 +1,15 @@
 /*-------------------------------Characters ------------------------------------*/
 
 #characters {
-  margin-top: 100px;
   width: 100vw;
-  height: 100vh;
+  height: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background-color: rgb(64, 172, 55);
+  padding: 25px;
 }
 
 #characters h1 {
@@ -20,24 +21,31 @@
   font-size: 2.4rem;
 }
 
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: inherit;
-  background-color: rgb(64, 172, 55);
-  padding: 25px;
+#character-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   box-sizing: border-box;
+  width: inherit;
+}
+
+.character {
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: black solid 1px;
+}
+
+.character:hover {
+  cursor: pointer;
 }
 
 .character:nth-child(2n) {
   background-color: yellow;
-  overflow: hidden;
 }
 
 .character:nth-child(2n + 1) {
   background-color: yellowgreen;
-  overflow: hidden;
   color: red;
 }
 
@@ -49,7 +57,6 @@
 #characters img {
   width: 20vw;
   height: 40vh;
-  cursor: pointer;
 }
 
 h2 {
@@ -150,7 +157,7 @@ to {
 
 @media screen and (max-width: 450px) {
   #characters {
-    height: 50vh;
+    height: 70vh;
   }
 
   #characters h1 {
@@ -159,18 +166,14 @@ to {
   }
 
   #characters img {
-    width: 20vw;
-    height: 20vh;
+    width: 18vw;
+    height: 15vh;
     cursor: pointer;
   }
 
   h2 {
     text-align: center;
     font-size: 0.8rem;
-  }
-
-  .row {
-    padding: 10px;
   }
 
   /*-------------------------------Modal ------------------------------------*/
@@ -180,15 +183,15 @@ to {
   }
 
   #img_caption {
-    width: 50vw;
-    height: 30vh;
-    font-size: 1rem;
+    width: 200px;
+    height: 200px;
+    font-size: 0.8rem;
     justify-content: center;
   }
 
   #img_1 {
-    width: 50vw;
-    height: 30vh;
+    width: 200px;
+    height: 175px;
   }
 
   #closeButton {
@@ -199,9 +202,12 @@ to {
 
   #modal {
     width: 80%;
-    height: 80%;
     margin: auto;
     margin-top: 20px;
+  }
+
+  #character-details {
+    height: 500px;
   }
 }
 
@@ -209,7 +215,7 @@ to {
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
   #characters {
-    height: 60vh;
+    height: 80vh;
   }
 
   #characters h1 {
@@ -254,5 +260,38 @@ to {
     margin: auto;
     margin-top: 20px;
     padding: 20px;
+  }
+
+  #character-details {
+    width: 80vw;
+    height: 700px;
+  }
+}
+
+/*-------------------------------IPAD PR0 ------------------------------------*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #characters {
+    height: 70vh;
+  }
+
+  #characters img {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  #character-details {
+    width: 80vw;
+    height: 850px;
+  }
+
+  #img_1 {
+    width: 40vw;
+    height: 30vh;
+    margin: auto;
+  }
+
+  #img_caption {
+    width: 40vw;
   }
 }
