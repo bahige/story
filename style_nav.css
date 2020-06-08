@@ -1,0 +1,47 @@
+/*-------------------------------Nav Bar ------------------------------------*/
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav div {
+  background-color: lawngreen;
+}
+
+nav div:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+nav div:hover a {
+  color: red;
+}
+
+nav div {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  text-align: center;
+  padding: 0.5%;
+  white-space: nowrap;
+}
+
+/*-------------------------------Phone ------------------------------------*/
+
+@media screen and (max-width: 450px) {
+  nav {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,258 @@
+/*-------------------------------Characters ------------------------------------*/
+
+#characters {
+  margin-top: 100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#characters h1 {
+  background-color: yellow;
+  width: 50vw;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px;
+  font-size: 2.4rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: inherit;
+  background-color: rgb(64, 172, 55);
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.character:nth-child(2n) {
+  background-color: yellow;
+  overflow: hidden;
+}
+
+.character:nth-child(2n + 1) {
+  background-color: yellowgreen;
+  overflow: hidden;
+  color: red;
+}
+
+.character:hover img {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+
+#characters img {
+  width: 20vw;
+  height: 40vh;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*-------------------------------Modal ------------------------------------*/
+
+#character-details {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: greenyellow;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+#character-details {
+  display: none;
+  animation-name: expansion_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+#img_caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 300px;
+  background-color: yellow;
+  color: blue;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 2%;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+
+#title {
+  font-size: 2.4rem;
+  text-decoration: underline;
+}
+
+#img_1 {
+  width: 25vw;
+  height: 40vh;
+  margin: auto;
+}
+
+@keyframes expansion_animation {
+  from {
+    transform: scale(0.9);
+  }
+}
+to {
+  transform: scale(1);
+}
+/*-------------------------------Phone ------------------------------------*/
+
+@media screen and (max-width: 450px) {
+  #characters {
+    height: 50vh;
+  }
+
+  #characters h1 {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  #characters img {
+    width: 20vw;
+    height: 20vh;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .row {
+    padding: 10px;
+  }
+
+  /*-------------------------------Modal ------------------------------------*/
+
+  #title {
+    font-size: 1.4rem;
+  }
+
+  #img_caption {
+    width: 50vw;
+    height: 30vh;
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  #img_1 {
+    width: 50vw;
+    height: 30vh;
+  }
+
+  #closeButton {
+    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  #modal {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+/*-------------------------------IPAD ------------------------------------*/
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  #characters {
+    height: 60vh;
+  }
+
+  #characters h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  #characters img {
+    width: 20vw;
+    height: 25vh;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  #title {
+    font-size: 1.6rem;
+  }
+
+  #img_caption {
+    width: 50vw;
+    height: 25vh;
+    font-size: 1.4rem;
+    justify-content: center;
+  }
+
+  #img_1 {
+    width: 50vw;
+    height: 30vh;
+  }
+
+  #closeButton {
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  #modal {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+  }
+}

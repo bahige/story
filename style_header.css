@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+body {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------------------Header ------------------------------------*/
+
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 20vh;
+  background-color: yellowgreen;
+}
+
+[alt="logo"] {
+  width: 30vw;
+  height: 20vh;
+  visibility: hidden;
+  animation-name: logo_animation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+#header-container:hover [alt="colorie_header"] {
+  transition: transform 2s, visibility 2s;
+  transition-delay: 1s;
+}
+
+[alt="colorie_header"] {
+  width: 80%;
+  height: 20vh;
+  /* transform: translate(-1222px, 0px); */
+  /* transition-duration: 1s;
+  transition-delay: 0s; */
+  animation-name: colorie_animation;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+#social_media img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+#social_media img:hover {
+  cursor: pointer;
+  animation-name: social_media_animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes logo_animation {
+  from {
+    visibility: hidden;
+    clip-path: circle(0 at 0 0);
+  }
+  to {
+    visibility: visible;
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+@keyframes colorie_animation {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+    transform: translate(-720px, 0px);
+  }
+}
+
+@keyframes social_media_animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/*-------------------------------Presentation ------------------------------------*/
+
+[alt="colorieweb"] {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*-------------------------------IPAD ------------------------------------*/
+
+@media screen and (min-width: 451px) and (max-width: 1024px) {
+  [alt="colorie_header"] {
+    display: none;
+    animation-delay: 0s;
+  }
+
+  [alt="colorieweb"] {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+/*-------------------------------Phone ------------------------------------*/
+
+@media screen and (max-width: 450px) {
+  #header-container {
+    height: 80px;
+  }
+
+  [alt="colorie_header"] {
+    display: none;
+    animation-delay: 0s;
+  }
+
+  [alt="colorieweb"] {
+    width: 100vw;
+    height: 70vh;
+  }
+
+  #social_media img {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+  }
+
+  [alt="logo"] {
+    width: 150px;
+    height: 75px;
+  }
+}
+
+/*-------------------------------Tablet ------------------------------------*/
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  [alt="logo"] {
+    width: 250px;
+    height: 150px;
+    margin-left: 5px;
+  }
+
+  #social_media img {
+    padding: 8px;
+  }
+}
