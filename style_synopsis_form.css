@@ -5,20 +5,26 @@ article {
   padding: 15px;
   height: 600px;
   width: 50vw;
+  overflow: scroll;
 }
 
 #synopsis {
   height: 100vh;
   width: 100vw;
   padding: 10px;
-  margin-bottom: 100px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: scroll;
 }
 
 #synopsis img {
   width: 40vw;
+  height: inherit;
   padding-bottom: 20px;
 }
 
@@ -44,7 +50,8 @@ article {
 
 [type="submit"] {
   font-size: 2.2rem;
-  width: 20vw;
+  width: 400px;
+  padding: 5px;
   background-color: red;
   color: white;
   margin: auto;
@@ -103,29 +110,34 @@ footer {
 
 @media screen and (max-width: 450px) {
   article {
-    height: 500px;
-    font-size: 0.5rem;
+    height: 350px;
+    font-size: 1rem;
   }
 
   #synopsis {
-    height: 450px;
+    height: 380px;
     margin-bottom: 20px;
   }
 
   #synopsis img {
-    height: 400px;
+    height: 320px;
     justify-self: center;
   }
 
   #form h1,
-  label,
-  [type="submit"] {
-    font-size: 1rem;
+  label {
+    font-size: 1.2rem;
   }
 
   #form h1 {
     text-indent: 4px;
     padding: 2px;
+  }
+
+  [type="submit"] {
+    width: 200px;
+    font-size: 1.6rem;
+    padding: 10px;
   }
 
   [alt="logo_one"] {
@@ -139,8 +151,7 @@ footer {
   }
 
   #form {
-    height: 640px;
-    /* margin-top: 50px; */
+    height: 720px;
   }
 
   footer {
@@ -153,11 +164,12 @@ footer {
 @media screen and (min-width: 451px) and (max-width: 768px) {
   article {
     height: 600px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    overflow: scroll;
   }
 
   #synopsis {
-    height: 600px;
+    height: 65vh;
     margin-bottom: 0px;
   }
 
@@ -194,6 +206,12 @@ footer {
   footer {
     height: 200px;
   }
+
+  [type="submit"] {
+    width: 250px;
+    font-size: 2rem;
+    padding: 10px;
+  }
 }
 
 /*-------------------------------IPAD PR0 ------------------------------------*/
@@ -214,10 +232,14 @@ footer {
   }
 
   #synopsis {
-    height: 85vh;
+    height: 60vh;
   }
 
   article {
     font-size: 1.6rem;
+  }
+
+  #synopsis img {
+    height: 700px;
   }
 }

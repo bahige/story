@@ -14,7 +14,7 @@
 
 #characters h1 {
   background-color: yellow;
-  width: 50vw;
+  width: 400px;
   text-align: center;
   margin-top: 0;
   padding: 20px;
@@ -29,7 +29,11 @@
 }
 
 .character {
-  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
@@ -129,11 +133,11 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 25vw;
-  height: 300px;
+  height: 40vh;
   background-color: yellow;
   color: blue;
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 2%;
   box-sizing: border-box;
@@ -163,25 +167,37 @@ to {
 
 @media screen and (max-width: 450px) {
   #characters {
-    height: 70vh;
+    height: 1050px;
   }
 
   #characters h1 {
     font-size: 1.3rem;
     padding: 10px;
+    width: 200px;
+  }
+
+  #img_container {
+    overflow: unset;
   }
 
   #characters img {
-    width: 18vw;
-    height: 15vh;
-    cursor: pointer;
+    height: 150px;
   }
 
   h2 {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
 
+  .character {
+    width: 120px;
+    height: 200px;
+  }
+
+  #character-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   /*-------------------------------Modal ------------------------------------*/
 
   #title {
@@ -220,12 +236,16 @@ to {
 /*-------------------------------IPAD ------------------------------------*/
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
+  .character {
+    height: 300px;
+  }
+
   #characters {
-    height: 80vh;
+    height: 800px;
   }
 
   #characters h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 10px;
   }
 
@@ -236,7 +256,7 @@ to {
 
   h2 {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   #title {
@@ -277,8 +297,12 @@ to {
 /*-------------------------------IPAD PR0 ------------------------------------*/
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .character {
+    height: 350px;
+  }
+
   #characters {
-    height: 70vh;
+    height: 1000px;
   }
 
   #characters img {
